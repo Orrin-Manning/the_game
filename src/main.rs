@@ -1,5 +1,8 @@
 use bevy::prelude::*;
 
+#[derive(Component)]
+struct Person;
+
 fn main() {
     App::new().add_system(hello_world).run();
 }
