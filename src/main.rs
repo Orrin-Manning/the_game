@@ -7,7 +7,10 @@ struct Person;
 struct Name(String);
 
 fn main() {
-    App::new().add_system(hello_world).run();
+    App::new()
+        .add_startup_system(add_people)
+        .add_system(hello_world)
+        .run();
 }
 
 fn hello_world() {
